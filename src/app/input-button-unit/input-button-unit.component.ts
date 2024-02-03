@@ -10,4 +10,15 @@ import { Component } from '@angular/core';
 })
 export class InputButtonUnitComponent {
   title = 'Learn about components';
+  constructor() { 
+    console.log('in constructor');
+    this.changeTitle('My First Angular App');
+    console.log('title :', this.title);
+    
+  }
+  changeTitle(newTitle: string): void {
+    this.title = newTitle;
+    console.log(this.title);  }
+  
+
 }
