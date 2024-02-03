@@ -1,7 +1,11 @@
 <p>
     input-button-unit works!
     The title is: {{ title }}
-</p>
-{{ generateTitle() }}
-  <input id="my-input" [value] = "generateTitle()">
-  <button>Save</button>
+  </p>
+
+  <input [value]="title"
+         (keyup.enter)="changeTitle(getInputValue($event))">
+
+  <button (click)="changeTitle('Button Clicked!')">
+    Save
+  </button>
