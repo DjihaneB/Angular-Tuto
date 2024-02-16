@@ -34,5 +34,18 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.3.2"
-  }
+  },
+  "categories": [
+    "Extension Packs"
+  ],
+  "extensionPack": [
+    "johnpapa.Angular2",
+    "Angular.ng-template",
+    "dbaeumer.vscode-eslint",
+    "johnpapa.winteriscoming",
+    "johnpapa.vscode-peacock",
+    "esbenp.prettier-vscode",
+    "pkief.material-icon-theme",
+    "GitHub.copilot"
+  ]
 }

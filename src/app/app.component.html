@@ -1,8 +1,18 @@
+<link rel="stylesheet" href="app.component.scss" />
 
-<link rel="stylesheet" href="app.component.scss">
 <span> {{ title }} app is running!</span>
 
-<h1>
-  Welcome to {{ title }}! 
-</h1>
+<h1>Welcome to {{ title }}!</h1>
 <app-input-button-unit></app-input-button-unit>
+
+<ul>
+  <li *ngFor="let todoItem of todoList">
+    <app-todo-item [item]=" todoItem"></app-todo-item>
+  </li>
+</ul>
+
+<ng-container *nfIf="userLoggedIn">
+  <h1>Welcome!</h1>
+  <h2>You are logged in</h2>
+</ng-container>
+

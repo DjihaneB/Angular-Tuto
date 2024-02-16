@@ -9,13 +9,15 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./input-button-unit.component.scss']
 })
 export class InputButtonUnitComponent {
-  title = 'Hello World';
+  title = 'Enter';
 
-  changeTitle(newTitle: string): void {
-    this.title = newTitle;
+  changeTitle(newTitle :string): void {
+    this.title = newTitle ;
   }
-  
+   
   getInputValue(event: Event): string {
     return (event.target as HTMLInputElement).value;
   }
+
+ 
 }
