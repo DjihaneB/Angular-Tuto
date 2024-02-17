@@ -12,6 +12,9 @@ import { TodoItem } from './interfaces/todo-item';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
+  addItem(title: string):void{
+    this.todoList.push({title: title });
+  }
   title = 'todo-list';
   todoList :TodoItem [] = [//indiquer que les élement de la liste todoListe sont de type du Objet TodoItem
     {title : 'install Node js'},

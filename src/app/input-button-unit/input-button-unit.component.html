@@ -8,8 +8,8 @@
 <input 
 #inputElementRef
 [value] = "title"
-(keyup.entre)="changeTitle(getInputValue($event))">
+(keyup.entre)="submitValue(getInputValue($event))">
 
-<button (click) = "changeTitle(inputElementRef.value)" >
+<button (click) = "submitValue(inputElementRef.value)" >
   Save
 </button>

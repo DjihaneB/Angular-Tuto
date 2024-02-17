@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,10 +9,13 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./input-button-unit.component.scss']
 })
 export class InputButtonUnitComponent {
+  @Output() submit: EventEmitter<string> = new EventEmitter<string>();
+
   title = 'Enter';
 
-  changeTitle(newTitle :string): void {
-    this.title = newTitle ;
+  submitValue(newTitle :string): void {
+    this.submit.emit(newTitle);
+    // this.title = newTitle ;
   }
    
   getInputValue(event: Event): string {
