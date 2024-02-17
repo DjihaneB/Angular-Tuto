@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { InputButtonUnitComponent } from './input-button-unit/input-button-unit.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
+import { TodoItem } from './interfaces/todo-item';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -12,7 +13,7 @@ import { TodoItemComponent } from './todo-item/todo-item.component';
 })
 export class AppComponent {
   title = 'todo-list';
-  todoList = [
+  todoList :TodoItem [] = [//indiquer que les élement de la liste todoListe sont de type du Objet TodoItem
     {title : 'install Node js'},
     {title: 'install Angular CLI'},
     {title: 'create new app'},
