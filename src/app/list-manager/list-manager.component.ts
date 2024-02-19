@@ -18,6 +18,11 @@ export class ListManagerComponent {
 addItem(title: string):void{
   this.todoList.push({title: title });
 }
+
+removeItem(item: TodoItem): void {
+  this.todoListService.deleteItem(item);
+}
+
 constructor(private todoListService: TodoListService){
   this.todoList = this.todoListService.getTodoList();
 }
