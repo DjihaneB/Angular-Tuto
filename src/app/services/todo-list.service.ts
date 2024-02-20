@@ -14,7 +14,7 @@ const defaultTodoList = [
 ];
 
 @Injectable({
-  providedIn: 'root' // Pour injecter le service au niveau racine
+  providedIn: 'root' 
 })
 
 export class TodoListService {

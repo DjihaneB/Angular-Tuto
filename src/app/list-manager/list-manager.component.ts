@@ -13,18 +13,22 @@ import { TodoListService } from '../services/todo-list.service';
   styleUrl: './list-manager.component.scss'
 })
 export class ListManagerComponent {
-  todoList :TodoItem [] = [];
+  todoList :TodoItem [];
+  
+  constructor(private todoListService: TodoListService){
+    this.todoList = this.todoListService.getTodoList();
+  }
 
 addItem(title: string):void{
-  this.todoList.push({title: title });
+  this.todoList.push({ title });
 }
 
 removeItem(item: TodoItem): void {
   this.todoListService.deleteItem(item);
 }
 
-constructor(private todoListService: TodoListService){
-  this.todoList = this.todoListService.getTodoList();
+updateItem(item: TodoItem, changes: any): void {
+  this.todoListService.updateItem(item, changes);
 }
 
 }
